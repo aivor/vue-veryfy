@@ -88,7 +88,7 @@
             v-for="(market, index) in markets"
             :key="index"
           >
-            <label>Market</label>
+            <label style="color : #999">Market</label>
             <select v-model="market_id" class="opt">
               <option
                 v-for="(item, index) in market"
@@ -98,7 +98,6 @@
               >
             </select>
           </div>
-          {{ market_id }}
           <div class="input-div pass">
             <div class="i">
               <i class="fas fa-lock"></i>
@@ -226,7 +225,9 @@ export default {
       console.log(UserData);
       axios.post("https://api-staging.veryfy.net/auth/signup", UserData).then(
         (res) => {
-          console.log(res);
+          if (res.status == 201) {
+            this.$router.push("/");
+          }
         },
         (err) => {
           console.log(err.response.data);

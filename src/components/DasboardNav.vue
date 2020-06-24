@@ -91,14 +91,15 @@ export default {
   },
   methods: {
     logout() {
+      console.log("token ", this.user_token);
       this.$store.dispatch("logout", this.user_token);
     },
   },
   beforeCreate() {
-    if (!this.$store.getters.tokens) this.$router.push({ path: "/" });
+    if (!this.$store.getters.tokens.token) this.$router.push({ path: "/" });
   },
   created() {
-    let token = this.$store.getters.tokens;
+    let token = this.$store.getters.tokens.token;
     // console.log(this.$store.getters.tokens);
     this.user_token = token;
   },
