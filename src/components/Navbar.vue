@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="/">
+      <router-link class="navbar-brand" to="/">
         <span style="color : #ff6377; font: Poppins ">VERYFY</span>
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -18,12 +18,14 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="/signup">
+          <router-link class="nav-item nav-link active" to="/signup">
             Sign up
             <span class="sr-only">(current)</span>
-          </a>
+          </router-link>
           <a class="nav-item nav-link active" href="/">
-            <span style="color:#ff6377; border:2px solid; padding: 5px">Sign in</span>
+            <span style="color:#ff6377; border:2px solid; padding: 5px"
+              >Sign in</span
+            >
           </a>
         </div>
       </div>
