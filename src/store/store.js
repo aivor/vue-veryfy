@@ -46,7 +46,7 @@ let store = new Vuex.Store({
       axios({
         url: "https://api-staging.veryfy.net/auth/logout",
         headers: {
-          Authorization: `Bearer ${token.token}`,
+          Authorization: `Bearer ${token}`,
         },
         method: "DELETE",
       }).then((res) => {
