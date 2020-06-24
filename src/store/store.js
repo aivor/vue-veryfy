@@ -53,8 +53,8 @@ let store = new Vuex.Store({
         let { status } = res;
         if (status === 204) {
           commit("user_logout", null);
+          window.localStorage.clear();
           router.push({ path: "/" });
-          localStorage.clear();
         }
       });
     },
