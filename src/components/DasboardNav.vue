@@ -27,9 +27,12 @@
       <p>Andy Ivor</p>
       <hr />
       Main
-      <a href="/dashboard" class="nav-link text-white p-3 mb-2 sidebar-link">
+      <router-link
+        to="/dashboard"
+        class="nav-link text-white p-3 mb-2 sidebar-link"
+      >
         <i class="fas fa-home"></i> HOME
-      </a>
+      </router-link>
       <router-link
         to="/dashboard/profile"
         class="nav-link text-white p-3 mb-2 sidebar-link"
